@@ -1,0 +1,9 @@
+- insert:
+    - id: tool-call-recovery
+      name: dsh-tool-call-recovery
+      config:
+        enabled: true
+        ptcOnly: true
+        maxRetries: 2
+        maxRecoveriesPerTurn: 20
+        maxTextChars: 65536

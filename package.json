@@ -1,0 +1,52 @@
+{
+  "name": "dsh-tool-call-recovery",
+  "version": "1.0.0",
+  "description": "Recover XML tool calls emitted as assistant text by prompting DeepSeek Harness to retry through its normal tool pipeline.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "detector.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.ja.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "scripts": {
+    "test": "node --test --test-isolation=none test/recovery.test.js",
+    "test:dsh": "node test/integration.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "cordis.patch.yml"
+    },
+    "engines": {
+      "dsh": ">=0.2.2-rc.1 <0.3.0-0"
+    }
+  },
+  "license": "MIT",
+  "author": "sasasin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sasasin/dsh-tool-call-recovery.git"
+  },
+  "homepage": "https://github.com/sasasin/dsh-tool-call-recovery#readme",
+  "bugs": {
+    "url": "https://github.com/sasasin/dsh-tool-call-recovery/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "ptc",
+    "tool-calling",
+    "recovery"
+  ]
+}
