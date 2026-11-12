@@ -21,7 +21,7 @@
     "node": "^22.19.0 || >=24.0.0"
   },
   "scripts": {
-    "test": "node --test --test-isolation=none test/recovery.test.js",
+    "test": "node --test test/recovery.test.js",
     "test:dsh": "node test/integration.mjs"
   },
   "dsh": {
